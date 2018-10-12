@@ -1,0 +1,24 @@
+{% extends "movie_app/base.html" %}
+{% block content %}
+<h1>Carlos</h1>
+
+
+{% if latest_blockbuster_list %}
+
+<h1>BlockBuster</h1>
+<ul>
+    {% for movies in latest_blockbuster_list %}
+    <li>{{ movies.name }}</li>
+    <li>{{ movies.yearReleased }}</li>
+    <li>{{ movies.ageAllowed}}</li>
+    <li>{{ movies.genre}}</li>
+
+    {% endfor %}
+</ul>
+{% else %}
+<p>No movies are available.</p>
+{% endif %}
+
+<div> <h1>BOTTTOM</h1> </div>
+
+{% endblock %}
